@@ -144,27 +144,16 @@ public static void Q3() {
     System.out.println("Q3: Enter how many numbers you want to check for primality: ");
     int n = Integer.parseInt(scan.nextLine());
     int counter = 0;
-    for (int i = 0; i < n; i++) {
-    if (i < 2)
-    continue;
-    boolean check = true;
-
-    for (int j = 2; j * j <= i; j++) {
-    if (i % j == 0) {
-    check = false;
-    break;
-    } else {
-
+    
+    for (int i = 1; i <= n; i++) 
+    {
+        if( n % i == 0)
+        {
+            counter++;
+        }
     }
-    }
-        if (check == true) {
-        counter++;
-        } 
-        else {}
-    }
-
-        System.out.println("There are: " + counter + " primes between 0 and " + n);
-    }
+     System.out.println("There are: " + counter + " primes between 0 and " + n);
+}
 
     public static void Q4() {
         Random rng = new Random();
